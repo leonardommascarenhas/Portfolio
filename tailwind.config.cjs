@@ -12,17 +12,22 @@ module.exports = {
       },
      keyframes: {
         rightToLeft: {
-          '0%': { opacity:0, transform: 'translateX(-50%)' },
+          '0%': { opacity:0, transform: 'translateX(-10rem)' },
           '100%': { opacity:1, transform: 'translateX(0)' },
         },
         LeftToRight: {
-          '0%': { opacity:0, transform: 'translateX(50%)' },
+          '0%': { opacity:0, transform: 'translateX(10rem)' },
           '100%': { opacity:1, transform: 'translateX(0)' },
+        },
+        fadeIn: {
+          '0%': {opacity: 0},
+          '100%': {opacity: 100}
         }
      },
      animation:{
-        firstH1Animation: 'rightToLeft 1s ease-in-out',
-        secondH1Animation: 'LeftToRight 1s ease-in-out'
+        firstH1Animation: 'rightToLeft 1.4s ease-in',
+        secondH1Animation: 'LeftToRight 1.4s ease-in',
+        fadeIn: 'fadeIn 1.5s ease-in'
      }
     },
   },
