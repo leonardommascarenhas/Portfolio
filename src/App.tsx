@@ -3,7 +3,7 @@ import Intro from "./components/Intro";
 
 const App: React.FC = () => {
   return (
-    <div className="h-full flex flex-col items-center justify-center bg-gray-700 text-center">
+    <div className="h-full flex flex-col items-center justify-center bg-black text-center opacity-90">
       <Intro />
     </div>
   );
