@@ -7,7 +7,7 @@ const Intro = () => {
       <h1 className=" animate-firstH1Animation">
         Oi, eu sou o <span className="text-blue-500">Leonardo Moura</span>.
       </h1>
-      <h1>
+      <h1 className="animate-secondH1Animation">
         Eu sou criador de &lt;<span className="text-yellow-300">Experiências</span> /&gt;
       </h1>
       <button>Cheque meus projetos</button>

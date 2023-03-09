@@ -14,10 +14,15 @@ module.exports = {
         rightToLeft: {
           '0%': { opacity:0, transform: 'translateX(-50%)' },
           '100%': { opacity:1, transform: 'translateX(0)' },
+        },
+        LeftToRight: {
+          '0%': { opacity:0, transform: 'translateX(50%)' },
+          '100%': { opacity:1, transform: 'translateX(0)' },
         }
      },
      animation:{
-        firstH1Animation: 'rightToLeft 1s ease-in-out'
+        firstH1Animation: 'rightToLeft 1s ease-in-out',
+        secondH1Animation: 'LeftToRight 1s ease-in-out'
      }
     },
   },
