@@ -25,11 +25,13 @@ module.exports = {
         }
      },
      animation:{
-        firstH1Animation: 'rightToLeft 1.4s ease-in',
-        secondH1Animation: 'LeftToRight 1.4s ease-in',
-        fadeIn: 'fadeIn 1.5s ease-in'
+        firstH1Animation: 'rightToLeft 1.4s ease-in-out',
+        secondH1Animation: 'LeftToRight 1.4s ease-in-out',
+        fadeIn: 'fadeIn 1.5s ease-in 1.4s'
      }
     },
   },
-  plugins: [],
+  plugins: [
+   require("tailwindcss-animate"),
+  ],
 }
