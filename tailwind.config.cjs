@@ -20,14 +20,14 @@ module.exports = {
           '100%': { opacity:1, transform: 'translateX(0)' },
         },
         fadeIn: {
-          '0%': {opacity: 0},
-          '100%': {opacity: 100}
-        }
+          '0%, 50%': {opacity: 0},
+          '100%': {opacity: 1}
+        },
      },
      animation:{
         firstH1Animation: 'rightToLeft 1.4s ease-in-out',
         secondH1Animation: 'LeftToRight 1.4s ease-in-out',
-        fadeIn: 'fadeIn 1.5s ease-in 1.4s'
+        fadeIn: 'fadeIn 3s ease-in-out'
      }
     },
   },
