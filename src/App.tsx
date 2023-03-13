@@ -1,9 +1,14 @@
 import React from "react";
+
 import Intro from "./components/Intro";
 
 const App: React.FC = () => {
   return (
-    <div className="h-full flex flex-col items-center justify-center bg-black text-center opacity-90 snap-y">
+    <div className="snap-y overflow-y-scroll w-screen h-screen bg-black opacity-95">
+      <Intro />
+      <Intro />
+      <Intro />
+      <Intro />
       <Intro />
     </div>
   );
