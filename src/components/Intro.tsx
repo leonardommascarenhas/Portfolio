@@ -9,7 +9,7 @@ const Intro = () => {
   const handleHover = removeClassOnHover("animate-fadeIn");
 
   return (
-    <section className="font-roboto text-2xl md:text-5xl text-white font-light space-y-3.5 bg-opacity-95">
+    <section className="font-roboto text-2xl md:text-5xl text-white font-light space-y-3.5 bg-opacity-90 snap-start">
       <h1 className="animate-firstH1Animation">
         Olá, me chamo <span className="text-blue-500">Leonardo Moura</span>.
       </h1>
@@ -22,7 +22,7 @@ const Intro = () => {
         onMouseEnter={handleHover}
       >
         Cheque meus projetos
-        <span className="mt-1.5 animate-bounce delay-150 text-blue-400">
+        <span className="mt-1.5 animate-bounce text-blue-400 group-hover:text-yellow-400">
           <BsFillArrowDownCircleFill />
         </span>
       </button>
