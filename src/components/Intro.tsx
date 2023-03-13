@@ -10,7 +10,7 @@ const Intro = () => {
   const handleHover = removeClassOnHover("animate-fadeIn");
 
   return (
-    <section className="w-screen max-w-full h-screen flex flex-col items-center justify-center font-roboto text-2xl md:text-5xl text-white font-light space-y-3.5 bg-opacity-90 snap-start">
+    <section className="text-center max-w-full h-screen flex flex-col items-center justify-center font-roboto text-2xl md:text-5xl font-light space-y-3.5 bg-opacity-90 snap-start">
       <h1 className="animate-firstH1Animation">
         Olá, me chamo <span className="text-blue-500">Leonardo Moura</span>.
       </h1>

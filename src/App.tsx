@@ -1,14 +1,13 @@
 import React from "react";
 
 import Intro from "./components/Intro";
+import About from "./components/About";
 
 const App: React.FC = () => {
   return (
-    <div className="snap-y snap-proximity overflow-y-scroll w-screen h-screen bg-black opacity-95">
+    <div className="snap-y snap-proximity text-white overflow-y-scroll w-screen h-screen bg-black opacity-95">
       <Intro />
-      <Intro />
-      <Intro />
-      <Intro />
+      <About />
       <Intro />
     </div>
   );
