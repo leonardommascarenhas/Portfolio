@@ -5,7 +5,7 @@ import TechStack from "./TechStack";
 const About = () => {
   return (
     <section className="snap-start h-screen flex flex-col items-center">
-      <h2 className="text-2xl md:text-5xl pt-5">Sobre Mim</h2>
+      <h2 className="text-2xl md:text-5xl">Sobre Mim</h2>
       <div className="lg:flex">
         <div className="mt-6 max-w-lg px-6 text-center text-lg">
           <img
