@@ -18,15 +18,17 @@ const Intro = () => {
         Eu sou criador de &lt;
         <span className="text-yellow-300">Experiências</span> /&gt;
       </h1>
-      <button
-        className="group inline-flex items-center gap-3 text-sm md:text-lg px-2 py-1 border border-blue-500 rounded-md animate-fadeIn fill-mode-forwards hover:-translate-y-0.5  hover:border-yellow-300 hover:transition-all hover:shadow hover:shadow-yellow-400/50"
-        onMouseEnter={handleHover}
-      >
-        Cheque meus projetos
-        <span className="mt-1.5 animate-bounce text-blue-400 group-hover:text-yellow-400">
-          <BsFillArrowDownCircleFill />
-        </span>
-      </button>
+      <a href="#about">
+        <button
+          className="group inline-flex items-center gap-3 text-sm md:text-lg px-2 py-1 border border-blue-500 rounded-md animate-fadeIn fill-mode-forwards hover:-translate-y-0.5  hover:border-yellow-300 hover:transition-all hover:shadow hover:shadow-yellow-400/50"
+          onMouseEnter={handleHover}
+        >
+          Cheque meus projetos
+          <span className="mt-1.5 animate-bounce text-blue-400 group-hover:text-yellow-400">
+            <BsFillArrowDownCircleFill />
+          </span>
+        </button>
+      </a>
     </section>
   );
 };

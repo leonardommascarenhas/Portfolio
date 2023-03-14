@@ -4,7 +4,7 @@ import { RiCss3Line, RiHtml5Line } from "react-icons/ri";
 
 const TechStack = () => {
   return (
-    <div className="flex flex-col justify-center items-center gap-3 text-sm">
+    <div className="flex flex-col justify-center items-center gap-3 text-sm mt-4">
       <div className="flex gap-3">
         <div className="techContainer">
           <FaJs className="techStackSize text-yellow-400" />
