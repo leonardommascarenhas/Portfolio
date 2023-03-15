@@ -12,7 +12,7 @@ const TechStack = () => {
         </div>
         <div className="techContainer">
           <FaReact className="techStackSize text-blue-400" />
-          <p>JavaScript</p>
+          <p>React JS</p>
         </div>
         <div className="techContainer">
           <SiTypescript className="techStackSize text-blue-500" />

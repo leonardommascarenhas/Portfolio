@@ -2,9 +2,17 @@ import React from "react";
 import profilePicture from "../assets/ProfilePicture.jpeg";
 import TechStack from "./TechStack";
 
-const About = () => {
+type Props = {
+  forwardedRef: React.RefObject<HTMLElement>;
+};
+
+const About = ({ forwardedRef }: Props) => {
   return (
-    <section id="about" className="h-screen flex flex-col items-center font-roboto text-sm">
+    <section
+      id="about"
+      ref={forwardedRef}
+      className="h-screen flex flex-col items-center font-roboto text-sm opacity-0 fill-mode-forwards"
+    >
       <h2 className="text-2xl md:text-5xl">Sobre Mim</h2>
       <div className="lg:flex">
         <div className="mt-3 max-w-lg px-6 text-ellipsis text-justify">
