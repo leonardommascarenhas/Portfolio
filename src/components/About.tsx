@@ -14,9 +14,9 @@ const About = ({ forwardedRef }: Props) => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting && entry.target.classList) {
-            entry.target.classList.add("animate-leftRight");
+            entry.target.classList.add("animate-rightLeft");
           } else {
-            entry.target.classList.remove("animate-leftRight");
+            entry.target.classList.remove("animate-rightLeft");
           }
         });
       },
@@ -38,7 +38,7 @@ const About = ({ forwardedRef }: Props) => {
     <section
       id="about"
       ref={forwardedRef}
-      className="h-screen flex flex-col items-center font-roboto text-sm  opacity-0 fill-mode-forwards snap-start"
+      className="h-screen flex flex-col items-center font-roboto text-sm  opacity-0 fill-mode-forwards"
     >
       <h2 className="text-2xl md:text-5xl">Sobre Mim</h2>
       <div className="lg:flex">

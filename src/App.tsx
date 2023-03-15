@@ -33,7 +33,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="text-white overflow-y-scroll scroll-smooth snap-y snap-normal w-screen h-screen overflow-x-hidden bg-black opacity-95">
+    <div className="text-white overflow-y-scroll scroll-smooth w-screen h-screen overflow-x-hidden bg-black opacity-95">
       <Intro />
       <About forwardedRef={animatedElementRef} />
     </div>
