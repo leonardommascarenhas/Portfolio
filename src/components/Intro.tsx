@@ -15,7 +15,7 @@ const Intro = () => {
       <h1 className="animate-rightLeft">
         Olá, me chamo <span className="text-blue-500">Leonardo Moura</span>.
       </h1>
-      <h1 className="animate-secondH1Animation">
+      <h1 className="animate-leftRight">
         Eu sou criador de &lt;
         <span className="text-yellow-300">Experiências</span> /&gt;
       </h1>

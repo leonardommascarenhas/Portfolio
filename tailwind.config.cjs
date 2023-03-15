@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens:{
+        'xs': '320px'
+      },
       fontFamily:{
         roboto: ['Roboto', 'sans-serif']
       },
@@ -26,7 +29,7 @@ module.exports = {
      },
      animation:{
         rightLeft: 'rightToLeft 1.4s ease-in-out',
-        secondH1Animation: 'LeftToRight 1.4s ease-in-out',
+        leftRight: 'LeftToRight 1.4s ease-in-out',
         fadeIn: 'fadeIn 3s ease-in-out'
      }
     },

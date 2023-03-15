@@ -11,7 +11,7 @@ const TechStack = ({ techRef }: Props) => {
     <div
       id="teste"
       ref={techRef}
-      className="flex flex-col justify-center items-center gap-3 text-sm mt-4 opacity-0 "
+      className="flex flex-col justify-center items-center gap-3 text-sm mt-4 opacity-0 fill-mode-forwards"
     >
       <div className="flex gap-3 teste">
         <div className="techContainer">

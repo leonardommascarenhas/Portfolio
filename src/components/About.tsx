@@ -14,8 +14,7 @@ const About = ({ forwardedRef }: Props) => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("animate-rightLeft");
-            entry.target.classList.add("fill-mode-forwards");
+            entry.target.classList.add("animate-leftRight");
           } else {
             entry.target.classList.remove("animate-rightLeft");
           }
