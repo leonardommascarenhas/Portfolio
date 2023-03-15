@@ -25,7 +25,7 @@ module.exports = {
         },
      },
      animation:{
-        firstH1Animation: 'rightToLeft 1.4s ease-in-out',
+        rightLeft: 'rightToLeft 1.4s ease-in-out',
         secondH1Animation: 'LeftToRight 1.4s ease-in-out',
         fadeIn: 'fadeIn 3s ease-in-out'
      }

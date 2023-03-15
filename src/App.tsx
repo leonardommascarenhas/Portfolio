@@ -4,14 +4,14 @@ import Intro from "./components/Intro";
 import About from "./components/About";
 
 const App: React.FC = () => {
-  const animatedElementRef = useRef<HTMLDivElement>(null);
+  const animatedElementRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("animate-fadeIn");
+            console.log("hurray");
           } else {
             entry.target.classList.remove("animate-fadeIn");
           }
@@ -36,6 +36,7 @@ const App: React.FC = () => {
     <div className="text-white overflow-y-scroll scroll-smooth w-screen h-screen bg-black opacity-95">
       <Intro />
       <About forwardedRef={animatedElementRef} />
+      <Intro />
     </div>
   );
 };

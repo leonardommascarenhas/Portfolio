@@ -2,10 +2,18 @@ import { FaJs, FaReact, FaGitAlt, FaSass } from "react-icons/fa";
 import { SiTypescript, SiVuedotjs, SiTailwindcss } from "react-icons/si";
 import { RiCss3Line, RiHtml5Line } from "react-icons/ri";
 
-const TechStack = () => {
+type Props = {
+  techRef: React.RefObject<HTMLDivElement>;
+};
+
+const TechStack = ({ techRef }: Props) => {
   return (
-    <div id="teste" className="flex flex-col justify-center items-center gap-3 text-sm mt-4">
-      <div className="flex gap-3">
+    <div
+      id="teste"
+      ref={techRef}
+      className="flex flex-col justify-center items-center gap-3 text-sm mt-4 opacity-0 "
+    >
+      <div className="flex gap-3 teste">
         <div className="techContainer">
           <FaJs className="techStackSize text-yellow-400" />
           <p>JavaScript</p>
@@ -19,7 +27,7 @@ const TechStack = () => {
           <p>TypeScript</p>
         </div>
       </div>
-      <div className="flex gap-3">
+      <div className="flex gap-3 teste">
         <div className="techContainer">
           <SiVuedotjs className="techStackSize text-green-500" />
           <p>Vue JS</p>
@@ -33,7 +41,7 @@ const TechStack = () => {
           <p>HTML5</p>
         </div>
       </div>
-      <div className="flex gap-3">
+      <div className="flex gap-3 teste">
         <div className="techContainer">
           <SiTailwindcss className="techStackSize text-blue-400" />
           <p>Tailwind</p>

@@ -1,4 +1,4 @@
-import React from "react";
+import { useEffect, useRef } from "react";
 import profilePicture from "../assets/ProfilePicture.jpeg";
 import TechStack from "./TechStack";
 
@@ -7,11 +7,39 @@ type Props = {
 };
 
 const About = ({ forwardedRef }: Props) => {
+  const animatedElementRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-rightLeft");
+            entry.target.classList.add("fill-mode-forwards");
+          } else {
+            entry.target.classList.remove("animate-rightLeft");
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (animatedElementRef.current) {
+      observer.observe(animatedElementRef.current);
+    }
+
+    // Clean up the observer on unmount
+    return () => {
+      if (animatedElementRef.current) {
+        observer.unobserve(animatedElementRef.current);
+      }
+    };
+  }, []);
   return (
     <section
       id="about"
       ref={forwardedRef}
-      className="h-screen flex flex-col items-center font-roboto text-sm opacity-0 fill-mode-forwards"
+      className="h-screen flex flex-col items-center font-roboto text-sm fill-mode-forwards"
     >
       <h2 className="text-2xl md:text-5xl">Sobre Mim</h2>
       <div className="lg:flex">
@@ -27,7 +55,7 @@ const About = ({ forwardedRef }: Props) => {
             ducimus, quos quam deserunt.
           </p>
         </div>
-        <TechStack />
+        <TechStack techRef={animatedElementRef} />
       </div>
     </section>
   );
