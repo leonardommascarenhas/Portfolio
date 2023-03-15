@@ -1,9 +1,13 @@
-import React, { useEffect, useRef } from "react";
-
+import React, { useEffect, useRef, useState } from "react";
+import { Context, MyContext } from "./Provider/auth";
 import Intro from "./components/Intro";
 import About from "./components/About";
 
 const App: React.FC = () => {
+  const [screenSize, setScreenSize] = useState<MyContext>({
+    windowWidth: window.innerWidth,
+    windowHeight: window.innerHeight,
+  });
   const animatedElementRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -32,12 +36,27 @@ const App: React.FC = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenSize({
+        windowWidth: window.innerWidth,
+        windowHeight: window.innerHeight,
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <div className="text-white overflow-y-scroll scroll-smooth w-screen h-screen bg-black opacity-95">
-      <Intro />
-      <About forwardedRef={animatedElementRef} />
-      <Intro />
-    </div>
+    <Context.Provider value={screenSize}>
+      <div className="text-white overflow-y-scroll scroll-smooth w-screen h-screen bg-black opacity-95">
+        <Intro />
+        <About forwardedRef={animatedElementRef} />
+        <Intro />
+      </div>
+    </Context.Provider>
   );
 };
 

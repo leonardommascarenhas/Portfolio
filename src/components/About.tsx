@@ -16,7 +16,7 @@ const About = ({ forwardedRef }: Props) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("animate-leftRight");
           } else {
-            entry.target.classList.remove("animate-rightLeft");
+            entry.target.classList.remove("animate-leftRight");
           }
         });
       },
