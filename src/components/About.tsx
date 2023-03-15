@@ -13,14 +13,14 @@ const About = ({ forwardedRef }: Props) => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
+          if (entry.isIntersecting && entry.target.classList) {
             entry.target.classList.add("animate-leftRight");
           } else {
             entry.target.classList.remove("animate-leftRight");
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.42 }
     );
 
     if (animatedElementRef.current) {
@@ -38,7 +38,7 @@ const About = ({ forwardedRef }: Props) => {
     <section
       id="about"
       ref={forwardedRef}
-      className="h-screen flex flex-col items-center font-roboto text-sm fill-mode-forwards"
+      className="h-screen flex flex-col items-center font-roboto text-sm  opacity-0 fill-mode-forwards snap-start"
     >
       <h2 className="text-2xl md:text-5xl">Sobre Mim</h2>
       <div className="lg:flex">
