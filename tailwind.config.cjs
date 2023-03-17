@@ -15,7 +15,7 @@ module.exports = {
       },
      keyframes: {
         rightToLeft: {
-          '0%': { opacity:0, transform: 'translateX(-10rem)' },
+          '0%': { opacity:0,filter: 'blur(1px)', transform: 'translateX(-10rem)' },
           '100%': { opacity:1, transform: 'translateX(0)' },
         },
         LeftToRight: {
@@ -32,9 +32,9 @@ module.exports = {
         }
      },
      animation:{
-        rightLeft: 'rightToLeft 1.4s ease-in-out ',
+        rightLeft: 'rightToLeft 1.4s ease-in-out',
         leftRight: 'LeftToRight 1.4s ease-in-out',
-        fadeIn: 'fadeIn 3s ease-in-out',
+        fadeIn: 'fadeIn 2.5s ease-in-out',
         downUp: 'downUp 1.4s ease-in-out'
      }
     },

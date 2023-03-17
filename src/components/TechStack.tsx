@@ -12,7 +12,7 @@ const TechStack = ({ techRef }: Props) => {
       ref={techRef}
       className="flex flex-col justify-center items-center gap-3 text-sm mt-4 fill-mode-forwards"
     >
-      <div className="techRowContainer delay-500 fill-mode-forwards">
+      <div className="techRowContainer delay-300 fill-mode-forwards">
         <div className="techContainer">
           <FaJs className="techStackSize text-yellow-400" />
           <p>JavaScript</p>
@@ -26,7 +26,7 @@ const TechStack = ({ techRef }: Props) => {
           <p>TypeScript</p>
         </div>
       </div>
-      <div className="techRowContainer delay-700 fill-mode-forwards">
+      <div className="techRowContainer delay-500 fill-mode-forwards">
         <div className="techContainer">
           <SiVuedotjs className="techStackSize text-green-500" />
           <p>Vue JS</p>
@@ -40,7 +40,7 @@ const TechStack = ({ techRef }: Props) => {
           <p>HTML5</p>
         </div>
       </div>
-      <div className="techRowContainer delay-1000 fill-mode-forwards">
+      <div className="techRowContainer delay-700 fill-mode-forwards">
         <div className="techContainer">
           <SiTailwindcss className="techStackSize text-blue-400" />
           <p>Tailwind</p>

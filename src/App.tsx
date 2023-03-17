@@ -12,12 +12,12 @@ const App: React.FC = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             if (window.innerWidth < 768) {
-              entry.target.classList.add("animate-leftRight");
+              entry.target.classList.add("animate-rightLeft");
             } else {
               entry.target.classList.add("animate-downUp");
             }
           } else {
-            entry.target.classList.remove("animate-leftRight", "animate-downUp");
+            entry.target.classList.remove("animate-rightLeft", "animate-downUp");
           }
         });
       },
