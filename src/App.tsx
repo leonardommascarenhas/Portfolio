@@ -11,9 +11,13 @@ const App: React.FC = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("animate-leftRight");
+            if (window.innerWidth < 768) {
+              entry.target.classList.add("animate-leftRight");
+            } else {
+              entry.target.classList.add("animate-downUp");
+            }
           } else {
-            entry.target.classList.remove("animate-leftRight");
+            entry.target.classList.remove("animate-leftRight", "animate-downUp");
           }
         });
       },
@@ -30,7 +34,7 @@ const App: React.FC = () => {
         observer.unobserve(animatedElementRef.current);
       }
     };
-  }, []);
+  }, [animatedElementRef]);
 
   return (
     <div className="text-white overflow-y-scroll scroll-smooth w-screen h-screen overflow-x-hidden bg-black opacity-95">

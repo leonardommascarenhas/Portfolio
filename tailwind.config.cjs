@@ -26,11 +26,16 @@ module.exports = {
           '0%, 50%': {opacity: 0},
           '100%': {opacity: 1}
         },
+        downUp:{
+          '0%': {opacity:0, transform: 'translateY(10rem)'},
+          '100%': {opacity:1, transform: 'translateY(0)'}
+        }
      },
      animation:{
-        rightLeft: 'rightToLeft 1.4s ease-in-out',
+        rightLeft: 'rightToLeft 1.4s ease-in-out ',
         leftRight: 'LeftToRight 1.4s ease-in-out',
-        fadeIn: 'fadeIn 3s ease-in-out'
+        fadeIn: 'fadeIn 3s ease-in-out',
+        downUp: 'downUp 1.4s ease-in-out'
      }
     },
   },

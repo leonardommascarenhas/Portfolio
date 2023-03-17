@@ -13,8 +13,9 @@ const About = ({ forwardedRef }: Props) => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.target.classList) {
+          if (entry.isIntersecting) {
             entry.target.classList.add("animate-rightLeft");
+            console.log(animatedElementRef.current?.children);
           } else {
             entry.target.classList.remove("animate-rightLeft");
           }
@@ -24,7 +25,10 @@ const About = ({ forwardedRef }: Props) => {
     );
 
     if (animatedElementRef.current) {
-      observer.observe(animatedElementRef.current);
+      const children = animatedElementRef.current.children;
+      for (let i = 0; i < children.length; i++) {
+        observer.observe(children[i]);
+      }
     }
 
     // Clean up the observer on unmount

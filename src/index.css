@@ -7,9 +7,12 @@
     .techStackSize{
         @apply h-6 sm:h-12 w-6 sm:w-12 lg:h-16 lg:w-16 
     }
-    .techContainer{
+    .techContainer{ 
         @apply grid place-items-center h-16 w-24 sm:h-20 lg:h-24 lg:w-28 p-1 bg-black bg-opacity-95 rounded-xl border-4 border-blue-500
     }
+   .techRowContainer{
+    @apply flex gap-3 opacity-0 
+   }
 }
 
 @layer utilities {
